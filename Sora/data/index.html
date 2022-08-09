@@ -1,0 +1,138 @@
+<!-- Complete project details: https://randomnerdtutorials.com/esp32-web-server-websocket-sliders/ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sora Serwer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <header>
+        <nav>
+            <ul>
+                <li>
+                <a href="index.html">Sterowanie</a>
+                </li>
+                <li>
+                <a href="index1.html">Komendy</a>
+                </li>
+                <li>
+                <a href="#">Kamera</a>
+                </li>
+                <li>
+                <a href="#">Inne</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="topnav">
+        <h1>SORA SERWER</h1>
+    </div>
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="card-title">Przednia lewa górna noga</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider11" min="50" max="140" step="1" value ="90" class="slider">
+                </p>
+                <p class="state">WARTOŚĆ: <span id="sliderValue11"></span> </p>
+            </div>
+            <div class="card">
+                <p class="card-title">Przednia lewa środkowa noga</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider12" min="0" max="180" step="1" value ="120" class="slider">
+                </p>
+                <p class="state">WARTOŚĆ: <span id="sliderValue12"></span> </p>
+            </div>
+            <div class="card">
+                <p class="card-title">Przednia lewa dolna noga</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider13" min="0" max="180" step="1" value ="180" class="slider">
+                </p>
+                <p class="state">WARTOŚĆ: <span id="sliderValue13"></span> </p>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="card-title">Przednia prawa górna noga</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider14" min="20" max="110" step="1" value ="90" class="slider">
+                </p>
+                <p class="state">WARTOŚĆ: <span id="sliderValue14"></span> </p>
+            </div>
+            <div class="card">
+                <p class="card-title">Przednia prawa środkowa noga</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider15" min="0" max="180" step="1" value ="60" class="slider">
+                </p>
+                <p class="state">WARTOŚĆ: <span id="sliderValue15"></span> </p>
+            </div>
+            <div class="card">
+                <p class="card-title">Przednia prawa dolna noga</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider16" min="0" max="180" step="1" value ="60" class="slider">
+                </p>
+                <p class="state">WARTOŚĆ: <span id="sliderValue16"></span> </p>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="card-title">Tylna lewa górna noga</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider17" min="50" max="140" step="1" value ="90" class="slider">
+                </p>
+                <p class="state">WARTOŚĆ: <span id="sliderValue17"></span> </p>
+            </div>
+            <div class="card">
+                <p class="card-title">Tylna lewa środkowa noga</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider18" min="0" max="180" step="1" value ="120" class="slider">
+                </p>
+                <p class="state">WARTOŚĆ: <span id="sliderValue18"></span> </p>
+            </div>
+            <div class="card">
+                <p class="card-title">Tylna lewa dolna noga</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider19" min="0" max="180" step="1" value ="180" class="slider">
+                </p>
+                <p class="state">WARTOŚĆ: <span id="sliderValue19"></span> </p>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="card-grid">
+            <div class="card">
+                <p class="card-title">Tylna prawa górna noga</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider20" min="50" max="140" step="1" value ="90" class="slider">
+                </p>
+                <p class="state">WARTOŚĆ: <span id="sliderValue20"></span> </p>
+            </div>
+            <div class="card">
+                <p class="card-title">Tylna prawa środkowa noga</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider21" min="0" max="180" step="1" value ="60" class="slider">
+                </p>
+                <p class="state">WARTOŚĆ: <span id="sliderValue21"></span> </p>
+            </div>
+            <div class="card">
+                <p class="card-title">Tylna prawa dolna noga</p>
+                <p class="switch">
+                    <input type="range" onchange="updateSliderPWM(this)" id="slider22" min="0" max="180" step="1" value ="0" class="slider">
+                </p>
+                <p class="state">WARTOŚĆ: <span id="sliderValue22"></span> </p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    </div>
+</body>
+</html>

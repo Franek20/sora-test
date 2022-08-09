@@ -1,0 +1,76 @@
+<!-- Complete project details: https://randomnerdtutorials.com/esp32-web-server-websocket-sliders/ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sora Serwer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li>
+                    <a href="index.html">Sterowanie</a>
+                    </li>
+                    <li>
+                    <a href="index1.html">Komendy</a>
+                    </li>
+                    <li>
+                    <a href="#">Kamera</a>
+                    </li>
+                    <li>
+                    <a href="#">Inne</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="topnav">
+            <h1>SORA SERWER</h1>
+        </div>
+        <div class="content"> 
+            <div class="card-grid">
+                <div class="card">
+                <p>Leżeć</p>
+                <button onclick="fn1(this);" id="div10"  style="display:inline;" class="button">ON</button>
+                <button onclick="fn2(this);" id="div11"  style="display:none;" class="button2">OFF</button>
+                </div>
+                <div class="card">
+                <p>Siad</p>
+                <button onclick="fn1(this);" id="div12"  style="display:inline;" class="button">ON</button>
+                <button onclick="fn2(this);" id="div13"  style="display:none;" class="button2">OFF</button>
+                </div>
+                <div class="card">
+                <p>Waruj</p>
+                <button onclick="fn1(this);" id="div14"  style="display:inline;" class="button">ON</button>
+                <button onclick="fn2(this);" id="div15"  style="display:none;" class="button2">OFF</button>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="card-grid">
+                <div class="card">
+                <p>Daj głos</p>
+                <button onclick="fn1(this);" id="div16"  style="display:inline;" class="button">ON</button>
+                <button onclick="fn2(this);" id="div17"  style="display:none;" class="button2">OFF</button>
+                </div>
+                <div class="card">
+                <p>Szukaj</p>
+                <button onclick="fn1(this);" id="div18"  style="display:inline;" class="button">ON</button>
+                <button onclick="fn2(this);" id="div19"  style="display:none;" class="button2">OFF</button>
+                </div>
+                <div class="card">
+                <p>Daj łapę</p>
+                <button onclick="fn1(this);" id="div20"  style="display:inline;" class="button">ON</button>
+                <button onclick="fn2(this);" id="div21"  style="display:none;" class="button2">OFF</button>
+                </div>
+            </div>        
+        </div>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
